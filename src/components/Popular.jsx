@@ -88,6 +88,8 @@ const Card = styled.div`
     font-weight: 1rem;
     height: 40%;
     display: flex;
+    justify-content: center;
+    align-items: center;
   }
  
   `;
