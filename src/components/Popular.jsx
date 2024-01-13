@@ -14,10 +14,10 @@ function Popular() {
     },[]); 
 
     const getPopular = async () => {
-        const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=9`);
+        const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=10`);
         const data = await api.json();
         console.log(data);
-        console.log("API_KEY:", API_KEY);
+        // console.log("API_KEY:", API_KEY);
         
     }
 
