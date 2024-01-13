@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-//  import dotenv from "dotenv";
-// dotenv.config();
+import styled from "styled-components";
 
 
 function Popular() {
@@ -38,5 +37,9 @@ function Popular() {
       </div>
   )
 }
+
+const wrapper = styled.div`
+  margin: 4rem 0rem; 
+`
 
 export default Popular
