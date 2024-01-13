@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 //  import dotenv from "dotenv";
 // dotenv.config();
 
 
 function Popular() {
+
+  const [popular, setPopular] = useState([]);
 
   // const API_KEY='178b89a5516a49859ebe5a39bf1afbe2';
   const API_KEY = process.env.REACT_APP_API_KEY;
