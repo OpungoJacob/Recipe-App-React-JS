@@ -29,17 +29,17 @@ function Popular() {
       
       {popular.map((recipe) =>{
         return(
-          <wrapper>
+          <Wrapper>
             <h3>Popular Picks</h3>
             {popular.map((recipe) => {
               return(
-                <card>
+                <Card>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
-                </card>
+                </Card>
               );
             })}
-          </wrapper>
+          </Wrapper>
         );
       })}
       
@@ -47,14 +47,19 @@ function Popular() {
   )
 }
 
-const wrapper = styled.div`
+const Wrapper = styled.div`
   margin: 4rem 0rem; 
 `;
 
-const card = styled.div`
+const Card = styled.div`
   min-height: 25rem;
   border-radius: 2rem;
   overflow: hidden;
+
+  img{
+    border-radius: 2rem;
+  }
+ 
   `;
 
 export default Popular
