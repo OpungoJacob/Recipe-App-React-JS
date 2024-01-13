@@ -28,9 +28,14 @@ function Popular() {
       
       {popular.map((recipe) =>{
         return(
-          <div key={recipe.id}> 
-            <p>{recipe.title}</p>
-          </div>
+          <wrapper>
+            <h3>Popular Picks</h3>
+            {popular.map((recipe) => {
+              return(
+
+              );
+            })}
+          </wrapper>
         );
       })}
       
@@ -40,6 +45,8 @@ function Popular() {
 
 const wrapper = styled.div`
   margin: 4rem 0rem; 
-`
+`;
+
+const
 
 export default Popular
