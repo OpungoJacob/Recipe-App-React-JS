@@ -25,7 +25,17 @@ function Popular() {
     }
 
   return (
-    <div>Popular</div>
+    <div>
+      
+      {popular.map((recipe) =>{
+        return(
+          <div key={recipe.id}> 
+            <p>{recipe.title}</p>
+          </div>
+        );
+      })}
+      
+      </div>
   )
 }
 
