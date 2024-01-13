@@ -7,7 +7,7 @@ function Popular() {
 
   // const API_KEY='178b89a5516a49859ebe5a39bf1afbe2';
   const API_KEY = process.env.REACT_APP_API_KEY;
-  console.log("API_KEY:", API_KEY); // Add this line
+  console.log("API_KEY:", API_KEY); 
 
     useEffect(() => {
         getPopular();
