@@ -31,6 +31,8 @@ function Popular() {
           console.log(data.recipes)
         
         }
+          //NB: In local storage, you can only save strings
+
 
          // console.log(data);
         // console.log("API_KEY:", API_KEY);
