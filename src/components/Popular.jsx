@@ -35,9 +35,7 @@ function Popular() {
 
 
          // console.log(data);
-        // console.log("API_KEY:", API_KEY);
-      
-        
+        // console.log("API_KEY:", API_KEY);       
        
     }
 

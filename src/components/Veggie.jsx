@@ -4,7 +4,43 @@ import {Splide, SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/splide/dist/css/splide.min.css'
 
 function Veggie() {
+
+  const [popular, setPopular] = useState([]);
+
+  // const API_KEY='178b89a5516a49859ebe5a39bf1afbe2';
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  // console.log("API_KEY:", API_KEY); 
+
+    useEffect(() => {
+        getPopular();
+    }, []); 
+
+    const getPopular = async () => {
+      // checking if there is an item in local storage
+        const check = localStorage.getItem('popular');
+
+        if(check) {
+          setPopular(JSON.parse(check))
+        } else {
+          //fetching data from api endpoint
+          const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=10`);
+          const data = await api.json();
+          
+          localStorage.setItem("popular", JSON.stringify(data.recipes));
+          setPopular(data.recipes);
+          console.log(data.recipes)
+        
+        }
+          //NB: In local storage, you can only save strings
+
+
+         // console.log(data);
+        // console.log("API_KEY:", API_KEY);       
+       
+    }
+
   return (
+    
     <div>
             
     <Wrapper>
