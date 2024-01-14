@@ -5,29 +5,29 @@ import '@splidejs/splide/dist/css/splide.min.css'
 
 function Veggie() {
 
-  const [popular, setPopular] = useState([]);
+  const [Veggie, setVeggie] = useState([]);
 
   // const API_KEY='178b89a5516a49859ebe5a39bf1afbe2';
   const API_KEY = process.env.REACT_APP_API_KEY;
   // console.log("API_KEY:", API_KEY); 
 
     useEffect(() => {
-        getPopular();
+        getVeggie();
     }, []); 
 
-    const getPopular = async () => {
+    const getVeggie = async () => {
       // checking if there is an item in local storage
-        const check = localStorage.getItem('popular');
+        const check = localStorage.getItem('Veggie');
 
         if(check) {
-          setPopular(JSON.parse(check))
+          setVeggie(JSON.parse(check))
         } else {
           //fetching data from api endpoint
           const api = await fetch(`https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=10`);
           const data = await api.json();
           
-          localStorage.setItem("popular", JSON.stringify(data.recipes));
-          setPopular(data.recipes);
+          localStorage.setItem("veggie", JSON.stringify(data.recipes));
+          setVeggie(data.recipes);
           console.log(data.recipes)
         
         }
@@ -44,10 +44,10 @@ function Veggie() {
     <div>
             
     <Wrapper>
-      <h3>Popular Picks</h3>
+      <h3>Vegetarian Picks</h3>
 
         <Splide options ={{
-          perPage: 4,
+          perPage: 3,
           arrows: false,
           pagination: false,
           drag: 'free',
