@@ -45,8 +45,11 @@ const SLink = styled(NavLink)`
  background: linear-gradient(35deg, #494949, #313131 );
  width: 6rem;
  height: 6rem;
- 
+ cursor: pointer;
+ transform: scale(0.8);
 
 `;
+
+
 
 export default Category
