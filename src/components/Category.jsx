@@ -8,10 +8,10 @@ import React from 'react'
 function Category() {
   return (
     <List>
-        <NavLink to={'/Cusisine/Italian'}>
+        <SLink to={'/Cusisine/Italian'}>
             <FaPizzaSlice/>
             <h4>Italian</h4>
-        </NavLink>
+        </SLink>
         <NavLink to={'/Cusisine/American'}>
             <FaHamburger  />
             <h4>American</h4>
@@ -32,6 +32,15 @@ const List = styled.div`
     display: flex;
     justify-content: center;
     margin: 2rem 0rem;
+`;
+
+const SLink = styled(NavLink)`
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+
 `;
 
 export default Category
