@@ -12,18 +12,18 @@ function Category() {
             <FaPizzaSlice/>
             <h4>Italian</h4>
         </SLink>
-        <NavLink to={'/Cusisine/American'}>
+        <SLink to={'/Cusisine/American'}>
             <FaHamburger  />
             <h4>American</h4>
-        </NavLink>
-        <NavLink to={'/Cusisine/Thai'}>
+        </SLink>
+        <SLink to={'/Cusisine/Thai'}>
             <GiNoodles/>
             <h4>Thai</h4>
-        </NavLink>
-        <NavLink to={'/Cusisine/Japanese'}>
+        </SLink>
+        <SLink to={'/Cusisine/Japanese'}>
             <GiChopsticks/>
             <h4>Japanese</h4>
-        </NavLink>
+        </SLink>
     </List>
   )
 }
@@ -40,6 +40,8 @@ const SLink = styled(NavLink)`
  justify-content: center;
  align-items: center;
  border-radius: 50%;
+ margin-right: 2rem;
+ text-decoration: none;
 
 `;
 
