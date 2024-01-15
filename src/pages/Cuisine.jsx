@@ -12,14 +12,14 @@ function Cuisine() {
 
 
     const getCuisine = async(name) => {
-        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&number=10&cuisine=${name}`);
+        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&cuisine=${name}`);
         const recipes = await data.json();
         setCuisine(recipes.results);
     };
 
     useEffect(() =>{
         getCuisine(params.type);
-        console.log(params)
+        console.log(params.type)
     }, [params.type])
 
   return (
