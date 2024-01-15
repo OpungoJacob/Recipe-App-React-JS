@@ -12,15 +12,15 @@ function Category() {
             <FaPizzaSlice/>
             <h4>Italian</h4>
         </NavLink>
-        <NavLink>
+        <NavLink to={'/Cusisine/American'}>
             <FaHamburger  />
             <h4>American</h4>
         </NavLink>
-        <NavLink>
+        <NavLink to={'/Cusisine/Thai'}>
             <GiNoodles/>
             <h4>Thai</h4>
         </NavLink>
-        <NavLink>
+        <NavLink to={'/Cusisine/Japanese'}>
             <GiChopsticks/>
             <h4>Japanese</h4>
         </NavLink>
