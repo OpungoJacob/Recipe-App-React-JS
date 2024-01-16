@@ -6,12 +6,13 @@ import { Form } from "react-router-dom";
 
 function Search() {
 
-    
+    const [input, setInput] = useState("");
+
   return (
     <FormStyle>
         <div>
             <FaSearch></FaSearch>
-            <input type="text" />
+            <input onChange={(e) => setInput(e.target.value)} type="text"  value={input}/>
         </div>
     </FormStyle>
   )
