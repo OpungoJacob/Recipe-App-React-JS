@@ -3,7 +3,7 @@ import Home from './Home';
 import Cuisine from './Cuisine';
 import {Route, Routes} from 'react-router-dom';
 import Searched from './Searched';
-import { Search } from '@mui/icons-material';
+
 
 function Pages() {
   return (
