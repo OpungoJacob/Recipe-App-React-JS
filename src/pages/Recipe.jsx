@@ -34,11 +34,22 @@ function Recipe() {
             <Button className={activeTab === 'ingredients' ? 'active' : '' } onClick={() => setActiveTab('ingredients')}>
                Ingredients 
             </Button>
-            <div>
-                <h3 dangerouslySetInnerHTML={}></h3>
-            </div>
+            {activeTab === 'instructions' && (
+                <div>
+                    <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
+                    <h3 dangerouslySetInnerHTML={{__html: details.instructions}}></h3>
+                </div>
+            )}
+            {activeTab === 'ingredients' && (
+                <ul>
+                    {details.extendedIngredients.map((ingredient) => 
+                        <li key={ingredient.id}> {ingredient.original} </li>
+                    )}
+                </ul>
+            )}
+           
+           
         </Info>
-
 
     </DetailWrapper>
   )
@@ -69,7 +80,7 @@ const Button = styled.button`
   padding: 1rem 2rem;
   color: #313131;
   background: white;
-  border: 2px solid black'  ;
+  border: 2px solid black ;
   margin-right: 2rem;
   font-weight: 600;
  `
