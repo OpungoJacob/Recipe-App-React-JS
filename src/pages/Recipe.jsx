@@ -12,12 +12,28 @@ function Recipe() {
     const fetchDetails = async () => {
         const data = await fetch(`https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${API_KEY}`);
         const detailData = await data.json();
-        setDetails(detailData)
-    }
+        setDetails(detailData);
+    };
+
+    useEffect(() =>{
+        fetchDetails();
+    }, [params.name]);
 
   return (
-    <div>Recipe</div>
+    <div>{details.title}</div>
   )
 }
+
+const DetailWrapper = styled.div`
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    display: flex;
+    h2{
+        margin-bottom: 2rem;
+    }
+    li{
+        font-size
+    }
+`
 
 export default Recipe
