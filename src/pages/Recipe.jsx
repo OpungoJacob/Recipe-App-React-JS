@@ -20,7 +20,10 @@ function Recipe() {
     }, [params.name]);
 
   return (
-    <div>{details.title}</div>
+    <DetailWrapper>
+        {details.title}
+        
+    </DetailWrapper>
   )
 }
 
@@ -45,11 +48,17 @@ const DetailWrapper = styled.div`
     }
 `
 
- const Button = styled.button`
+const Button = styled.button`
   padding: 1rem 2rem;
   color: #313131;
   background: white;
-  border: 2px solid black'  
+  border: 2px solid black'  ;
+  margin-right: 2rem;
+  font-weight: 600;
  `
+
+const  info = styled.div`
+    margin-left: 10rem;
+`
 
 export default Recipe
