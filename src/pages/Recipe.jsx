@@ -21,8 +21,20 @@ function Recipe() {
 
   return (
     <DetailWrapper>
-        {details.title}
-        
+        <div>
+            <h2>{details.title}</h2>
+            <img src={details.image} />
+        </div>
+        <Info>
+            <Button>
+               Instructions 
+            </Button>
+            <Button>
+               Ingredients 
+            </Button>
+        </Info>
+
+
     </DetailWrapper>
   )
 }
@@ -57,7 +69,7 @@ const Button = styled.button`
   font-weight: 600;
  `
 
-const  info = styled.div`
+const  Info = styled.div`
     margin-left: 10rem;
 `
 
