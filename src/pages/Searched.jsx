@@ -7,7 +7,7 @@ function Searched() {
 
   const API_KEY = process.env.REACT_APP_API_KEY;
 
-  const [serachedRecipes, setSearchedRecipes] = useState([]);
+  const [searchedRecipes, setSearchedRecipes] = useState([]);
   let params = useParams();
 
   const getSearched = async(name) => {
@@ -18,10 +18,19 @@ function Searched() {
 
   useEffect(() => {
     getSearched(params.search);
-  },[params.search]);
+  }, [params.search]);
 
   return (
-    <div>Searched</div>
+    <Grid>
+      {searchedRecipes.map((item) =>{
+        return(
+          <Card key={item.id}>
+              <img src={item.image} alt=""/>
+              <h4>{item.title}</h4>
+          </Card>
+        )
+      })}
+    </Grid>
   )
 }
 
