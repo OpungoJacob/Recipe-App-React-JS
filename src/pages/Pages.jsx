@@ -4,18 +4,19 @@ import Cuisine from './Cuisine';
 import {Route, Routes} from 'react-router-dom';
 import Searched from './Searched';
 import Recipe from './Recipe';
+import { AnimatePresence } from 'framer-motion';
 
 
 function Pages() {
   return (
-    
+    <AnimatePresence exitBeforeEnter>
     <Routes>
         <Route path="/" element={ <Home />}/>
         <Route path ="/cuisine/:cuisine" element={<Cuisine />}/>
         <Route path="/searched/:search" element={<Searched />}/>
         <Route path="recipe/:name" element={<Recipe />}/>
     </Routes>
-   
+    </AnimatePresence>
   )
 }
 
