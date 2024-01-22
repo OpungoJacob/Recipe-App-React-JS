@@ -5,6 +5,7 @@ import {BrowserRouter} from 'react-router-dom';
 import Search from './components/Search';
 import styled from 'styled-components';
 import { GiKnifeFork } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
 
 const Logo = styled(Link)`
   text-decoration: none;
-  font-size: 400;
+  font-size: 1.5rem;
+  font-weight: 400;
   font-family: 'Lobster Two', cursive;
 `;
 
@@ -33,7 +35,6 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center; 
-
   svg{
     font-size: 2rem;
   }
