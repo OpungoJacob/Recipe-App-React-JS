@@ -74,7 +74,7 @@ const DetailWrapper = styled.div`
         margin-top: 2rem;
 
     }
-`
+`;
 
 const Button = styled.button`
   padding: 1rem 2rem;
@@ -83,10 +83,10 @@ const Button = styled.button`
   border: 2px solid black ;
   margin-right: 2rem;
   font-weight: 600;
- `
+ `;
 
 const  Info = styled.div`
     margin-left: 10rem;
-`
+`;
 
 export default Recipe
